@@ -62,27 +62,19 @@ header {
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-
-
 .coming-soon {
   font-family: "Great Vibes", cursive;
-  font-size: 3rem;
   font-weight: lighter;
   margin: 10px 0 20px;
-  animation: dots 1.5s infinite;
   color: #243612;
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 3rem);  
 }
 
-
- .coming-soon {
-  font-size: 1.5rem;
-  /* font-weight: bold; */
-}
-
-/* animate only the dots */
+/* animate only dots */
 .coming-soon .dots::after {
   content: "";
-  animation: dots 2.2s steps(3, end) infinite;
+  animation: dots 2s steps(3, end) infinite;
 }
 
 @keyframes dots {
@@ -91,6 +83,7 @@ header {
   66%  { content: ".."; }
   100% { content: "..."; }
 }
+
 
 @media (max-width: 480px) {
   .coming-soon {
