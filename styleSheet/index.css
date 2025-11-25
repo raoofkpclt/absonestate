@@ -92,6 +92,23 @@ header {
   100% { content: "..."; }
 }
 
+@media (max-width: 480px) {
+  .coming-soon {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .coming-soon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .coming-soon {
+    font-size: 3rem;
+  }
+}
 
 
 .contact p {
