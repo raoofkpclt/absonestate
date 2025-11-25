@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  background-color: #58743f;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body {
+  background-color: #58743f;
+  background-image: radial-gradient(#7fa861 1px, transparent 1px),
+                    radial-gradient(#7fa861 1px, transparent 1px);
+  background-size: 40px 40px;
+  box-shadow: 0 4px 12px rgba(30, 60, 20, 0.6); 
+}
+
+
+/* header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #58743f;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px #F6EDDE;
+  box-shadow: 5px 5px 12px rgba(40, 70, 30, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+} */
+
+header {
+  text-align: left;
+  padding: auto;
+  background-color: #58743f;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 12px rgba(40, 70, 30, 0.6);
+}
+
+
+.center-content {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  height: 40vh;
+  margin-bottom: 20px;
+}
+.header-logo img {
+  height: 90px;  /* adjust as needed */
+  width: auto;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+
+.coming-soon {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  font-weight: lighter;
+  margin: 10px 0 20px;
+  animation: dots 1.5s infinite;
+  color: #243612;
+}
+
+
+ .coming-soon {
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+}
+
+/* animate only the dots */
+.coming-soon .dots::after {
+  content: "";
+  animation: dots 2.2s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: ""; }
+  33%  { content: "."; }
+  66%  { content: ".."; }
+  100% { content: "..."; }
+}
+
+
+
+.contact p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #58743f;
+  font-size: 0.9rem;
+   box-shadow: 5px 5px 12px rgba(40, 70, 30, 0.6);
+   color: #112003;
+}
