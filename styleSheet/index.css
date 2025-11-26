@@ -66,9 +66,14 @@ header {
   font-family: "Great Vibes", cursive;
   font-weight: lighter;
   margin: 10px 0 20px;
+<<<<<<< HEAD
   color: #243612;
   text-align: center;
   font-size: clamp(1.8rem, 5vw, 3rem);  
+=======
+  animation: dots 1.5s infinite;
+  color: #1a3800;
+>>>>>>> 7f6a3c7 (add phone)
 }
 
 /* animate only dots */
@@ -84,6 +89,31 @@ header {
   100% { content: "..."; }
 }
 
+@media (max-width: 480px) {
+  .coming-soon {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .coming-soon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .coming-soon {
+    font-size: 3rem;
+  }
+}
+
+.phone {
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 20px;
+  color: #1a3800;
+  /* text-shadow: 1px 1px 10px rgb(161, 203, 153); */
+}
 
 @media (max-width: 480px) {
   .coming-soon {
