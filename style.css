@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 10;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)),
+              url('/assets/image-gen (1).jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background-color: #58743f;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #3f572b;
+}
+
+.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary:hover {
+  background-color: white;
+  color: #333;
+}
+
+
+.contact-strip {
+  background-color: #58743f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: 500;
+}
+
+
+footer {
+  background-color: #1c1c1c;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+
+@media(max-width: 768px){
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  header {
+    padding: 20px;
+  }
+}

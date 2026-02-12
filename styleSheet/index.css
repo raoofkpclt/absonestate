@@ -115,6 +115,17 @@ header {
   /* text-shadow: 1px 1px 10px rgb(161, 203, 153); */
 }
 
+.call-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.call-link:hover {
+  text-decoration: underline; /* optional */
+}
+
+
 @media (max-width: 480px) {
   .coming-soon {
     font-size: 1.8rem;
