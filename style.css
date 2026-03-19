@@ -1,16 +1,22 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #1f2f17;
   color: #333;
 }
 
 
+/* ================= HEADER ================= */
 header {
   position: absolute;
   width: 100%;
@@ -22,10 +28,12 @@ header {
   height: 90px;
 }
 
+
+/* ================= HERO ================= */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)),
-              url('/assets/image-gen\ \(7\).png');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/assets/image-gen (7).png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -35,30 +43,18 @@ header {
   color: white;
 }
 
-
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hero {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                      url('/assets//image-gen\ \(8\).png');
-  }
-}
-
-
 .hero-content h1 {
   font-size: 3rem;
-  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  font-weight: 300;
 }
 
 
+/* ================= BUTTONS ================= */
 .cta-buttons {
   display: flex;
   gap: 20px;
@@ -71,12 +67,12 @@ header {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .primary {
   background-color: #58743f;
-  color: white;
+  color: #fff;
 }
 
 .primary:hover {
@@ -84,107 +80,65 @@ header {
 }
 
 .secondary {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .secondary:hover {
-  background-color: white;
+  background-color: #fff;
   color: #333;
 }
 
 
-.contact-strip {
-  background-color: #58743f;
-  color: white;
+/* ================= BRAND LOGOS ================= */
+.brand-logos {
+  background: linear-gradient(135deg, #1f3d2b, #2f5d3a);
+  padding: 40px 20px;
   text-align: center;
-  padding: 15px;
-  font-weight: 500;
 }
 
-
-footer {
-  background-color: #1c1c1c;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-
-@media(max-width: 768px){
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  header {
-    padding: 20px;
-  }
-}
-
-/* RAMADAN IFTAR SECTION */
-.iftar-section {
-  position: relative;
-  height: 90vh;
-  background: linear-gradient(rgba(8, 40, 5, 0.85), rgba(8, 40, 5, 0.85)),
-              url('https://images.unsplash.com/photo-1584556812952-905ffd0f0c48');
-  background-size: cover;
-  background-position: center;
+.logos-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  padding: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Content */
-.iftar-content {
-  position: relative;
-  z-index: 5;
-  max-width: 700px;
-}
-
-.iftar-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.iftar-content p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-/* WhatsApp Button */
-.whatsapp-btn {
-  background: linear-gradient(45deg, #25D366, #1ebc59);
-  color: white;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
+.logos-container img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
   transition: 0.3s ease;
-  display: inline-block;
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.08);
+.logos-container img:hover {
+  transform: scale(1.1);
 }
 
-/* Crescent Moon */
+
+/* ================= EID SECTION ================= */
+.eid-section {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to top, #1f2f17, #3f572b);
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Moon */
 .moon {
   position: absolute;
-  top: 60px;
-  right: 80px;
+  top: 80px;
+  right: 120px;
   width: 80px;
   height: 80px;
-  background: #fdd835;
+  background: #f5f3ce;
   border-radius: 50%;
-  box-shadow: -15px 0 0 10px #091c3f;
-  z-index: 2;
+  box-shadow: 0 0 30px #fff, 0 0 60px #f5f3ce;
+  animation: glow 3s infinite alternate;
 }
 
 /* Stars */
@@ -195,88 +149,166 @@ footer {
   background-image: radial-gradient(white 1px, transparent 1px);
   background-size: 50px 50px;
   opacity: 0.2;
-  z-index: 1;
 }
+
+/* Lanterns */
+.lantern {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: #ffd700;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffd700;
+  animation: swing 3s ease-in-out infinite;
+}
+
+.lantern1 { top: 100px; left: 20%; }
+.lantern2 { top: 150px; left: 70%; }
+
+/* Mosque */
 .mosque {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 140px;
-  background-color: #011404;
-  clip-path: polygon(
-    0% 100%, 0% 70%, 5% 65%, 10% 70%, 15% 60%, 20% 75%, 
-    25% 65%, 30% 70%, 35% 60%, 40% 75%, 45% 65%, 
-    50% 70%, 55% 60%, 60% 75%, 65% 65%, 70% 70%, 
-    75% 60%, 80% 75%, 85% 65%, 90% 70%, 95% 65%, 
-    100% 70%, 100% 100%
-  );
-  z-index: 2;
+  height: 200px;
+  background: url('https://i.imgur.com/8Km9tLL.png') no-repeat center;
+  background-size: cover;
+  opacity: 0.85;
+}
+
+/* Content */
+.eid-content {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.eid-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.eid-content p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 
-/* Responsive */
-@media(max-width: 768px){
-  .iftar-content h2 {
-    font-size: 1.8rem;
+/* ================= CONTACT ================= */
+.contact-strip {
+  background: #3f572b;
+  padding: 15px;
+  text-align: center;
+}
+
+.call-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.call-btn {
+  background: #ffd700;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+.call-btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #1c1c1c;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* ================= ANIMATIONS ================= */
+@keyframes glow {
+  from { box-shadow: 0 0 20px #fff; }
+  to { box-shadow: 0 0 60px #fff, 0 0 100px #ffd700; }
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  header {
+    padding: 20px;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                      url('/assets/image-gen (8).png');
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .eid-section {
+    height: auto;
+    padding: 80px 20px 120px;
+  }
+
+  .eid-content {
+    top: 0;
+    transform: none;
+  }
+
+  .eid-content h1 {
+    font-size: 2rem;
+  }
+
+  .eid-content p {
+    font-size: 0.95rem;
   }
 
   .moon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     top: 30px;
-    right: 30px;
+    right: 20px;
+  }
+
+  .lantern {
+    width: 22px;
+    height: 35px;
+  }
+
+  .mosque {
+    height: 100px;
   }
 }
 
-
-/* LOGO SECTION */
-.brand-logos {
+.brand-contact {
   background: linear-gradient(135deg, #1f3d2b, #2f5d3a);
   padding: 40px 20px;
   text-align: center;
 }
 
-.logos-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* Rounded Logos */
-.logos-container img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 50%;
-  padding: 10px;
-  background: white;
-  transition: 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-/* Hover Effect */
-.logos-container img:hover {
-  transform: scale(1.1);
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 80vh;
-  }
-
-  .iftar-section {
-    height: auto;
-    padding: 80px 20px;
-  }
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 75vh;
-  }
-
-  .iftar-section {
-    height: auto;
-    padding: 80px 20px;
-  }
+.brand-contact .logos-container {
+  margin-bottom: 30px;
 }
